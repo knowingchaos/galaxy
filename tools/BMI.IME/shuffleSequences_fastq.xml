@@ -1,0 +1,16 @@
+<tool id="shuffleSequences_fastq" name="ShuffleSequences_fastq">
+	<description></description>
+	  <command interpreter="perl">shuffleSequences_fastq.pl $input1 $input2 $output</command>
+	    <inputs>
+			<param format="fastq" name="input1" type="data" label="input file1" />
+			<param format="fastq" name="input2" type="data" label="input file2" />
+			<param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="fastq" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**ShuffleSequences_fastq Overview**
+
+      </help>
+</tool>

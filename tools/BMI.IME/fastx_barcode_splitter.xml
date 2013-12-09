@@ -1,0 +1,24 @@
+<tool id="fastx_barcode_splitter" name="fastx_barcode_splitter">
+	<description></description>
+	  <command interpreter="perl">
+	  fastx_barcode_splitter.pl $input1 --bcfile $input2 --prefix $output --$select --mismatches $x1
+	   --partial $x2</command>
+	    <inputs>
+			<param format="fastq" name="input1" type="data" label="input file1" />
+			<param format="txt" name="input2" type="data" label="input file2" />
+ 			<param  name="outputfilename" type="text" label="output file name" />				
+			<param name="select" type="select" label="select bol or eol">
+				<option value="bol">bol</option>
+				<option value="eol">eol</option>
+			</param>
+			<param name="x1" type="integer" value="1"  label="number of mismatches" />
+			<param name="x2" type="integer" value=""  label="partial overlap of barcodes" />
+        </inputs>
+		<outputs>
+           <data format="txt" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**fastx_barcode_splitter Overview**
+
+      </help>
+</tool>

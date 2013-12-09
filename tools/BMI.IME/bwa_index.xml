@@ -1,0 +1,15 @@
+<tool id="bwa_index" name="bwa_index">
+	<description></description>
+	  <command interpreter="eval">./bwa index -a $sel $input</command>
+	    <inputs>
+			<param name="sel" type="select" label="BWT construction algorithm:">
+				<option value="is">is</option>
+				<option value="bwtsw">bwtsw</option>
+			</param>
+			<param format="fasta" name="input" type="data" label="input file" />
+        </inputs>
+	  <help>
+**bwa_index Overview**
+
+      </help>
+</tool>

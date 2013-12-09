@@ -1,0 +1,48 @@
+<tool id="bwa_aln" name="bwa_aln">
+  <command  interpreter="eval">
+  bwa 
+  aln
+  -n $n 
+  -l $l 
+  #if $genomeSource.refGenomeSource == "history":
+    /${genomeSource.ownFile}
+  #else:
+    ${genomeSource.indices.fields.path}
+  #end if
+   $fastqfile
+
+  -f $output
+  </command>
+
+  <inputs>
+    <param name="n" type="float" label="[n] max #diff (int) or missing prob under 0.02 err rate (float) [0.04]" value="0.04"/>
+    <param name="l" type="float" label="[l] seed length [32]" value="32" />
+    <conditional name="genomeSource">
+      <param name="refGenomeSource" type="select" label="Will you select a reference genome from your history or use a built-in index?">
+        <option value="indexed">Use a built-in index</option>
+        <option value="history">Use one from the history</option>
+      </param>
+      <when value="indexed">
+        <param name="indices" type="select" label="Select a reference genome">
+          <options from_data_table="bwa_indexes">
+            <filter type="sort_by" column="2" />
+            <validator type="no_options" message="No indexes are available" />
+          </options>
+        </param>
+      </when>
+      <when value="history">
+        <param name="ownFile" type="data" format="fasta" metadata_name="dbkey" label="Select a reference from history" />
+      </when>
+    </conditional>
+     <param name="fastqfile" type="data" format="fastq" label="Select a fastq file from history" />
+        <param name="outputfile" type="text" value="" />
+  </inputs>
+
+  <outputs>
+    <data  name="output" label="${outputfile}">
+    </data>
+  </outputs>
+
+</tool>
+
+

@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<style>
+
+body
+{
+  font: 12px verdana, "Bitstream Vera Sans", geneva, arial, helvetica, helve, sans-serif;
+  line-height: 160%;
+}
+
+div.test
+{
+  margin: 5px;
+  padding: 5px;
+  border: solid black 1px;
+  background: lightgray;
+}
+
+div.success
+{
+  background: #CCFFCC;
+  border: solid #66AA66 1px;
+}
+
+div.error, div.failure
+{
+  background: #FFCCCC;
+  border: solid #AA6666 1px;
+}
+
+span.label
+{
+  font-weight: bold;
+}
+
+pre
+{
+  background: white;
+  padding: 5px;
+  border:  solid black 1px;
+  display: block;
+  overflow: auto;
+}
+</style>
+
+<script>
+function toggle(name){
+	var elem = document.getElementById(name)
+	if (elem) {
+		if (elem.style.display=="none"){
+			elem.style.display="block"
+		} else {
+			elem.style.display="none"
+		}
+	}
+}
+</script>
+</head>
+<body>
+
+<div class='test success'>
+<div><span class='label'>ID:</span> test_0000_basic_repository_features.TestBasicRepositoryFeatures.test_0000_initiate_users</div>
+<div><span class='label'>Description:</span> Create necessary user accounts and login as an admin user.</div>
+<div><span class='label'>Status:</span> success</div>
+</div>
+<div class='test success'>
+<div><span class='label'>ID:</span> test_0000_basic_repository_features.TestBasicRepositoryFeatures.test_0005_create_categories</div>
+<div><span class='label'>Description:</span> Create categories for this test suite</div>
+<div><span class='label'>Status:</span> success</div>
+</div>
+<div class='test success'>
+<div><span class='label'>ID:</span> test_0000_basic_repository_features.TestBasicRepositoryFeatures.test_0010_create_repository</div>
+<div><span class='label'>Description:</span> Create the repositories</div>
+<div><span class='label'>Status:</span> success</div>
+</div>
+
+</body>
+</html>
+

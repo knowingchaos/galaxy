@@ -1,0 +1,17 @@
+<tool id="sff_extract_0_3_0" name="sff_extract_0_3_0">
+	<description></description>
+	  <command interpreter="python">
+	 sff_extract_0_3_0.py -l $input1 -o $output $input2</command>
+	    <inputs>
+			<param format="txt" name="input1" type="data" label="input file1" />
+                        <param format="sff" name="input2" type="data" label="input file2" />
+                        <param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="txt" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**sff_extract_0_3_0 Overview**
+
+      </help>
+</tool>

@@ -1,0 +1,22 @@
+﻿<tool id="Extract_feature_gb" name="Extract_feature_gb">
+	<description></description>
+	  <command interpreter="perl">Extract_feature_gb.pl $input $output $feature</command>
+	    <inputs>
+			<param format="gb" name="input" type="data" label="input file" />
+                        <param  name="outputfilename" type="text" label="output file name" />
+			<param name="feature" type="select" label="Feature">
+				<option value="CDS">CDS</option>
+				<option value="gene">gene</option>
+				<option value="tRNA">tRNA</option>
+				<option value="mRNA">mRNA</option>
+			</param>
+        </inputs>
+		<outputs>
+           <data format="txt" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**Extract_feature_gb Overview**
+
+从genbank文件中提取出cds序列的feature信息。
+      </help>
+</tool>

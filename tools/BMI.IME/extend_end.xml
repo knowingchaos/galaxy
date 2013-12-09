@@ -1,0 +1,21 @@
+﻿<tool id="extend_end" name="Extend">
+	<description>contigs end</description>
+	  <command interpreter="perl">extend_end.pl $input1 $input2 $input3 $input4 $output</command>
+	    <inputs>
+			<param format="fasta" name="input1" type="data" label="fasta file1" />
+			<param format="fasta" name="input2" type="data"  label="fasta file2" />
+                        <param  name="outputfilename" type="text" label="output file name" />
+			<param name="input3" type="integer" value="10" min="10" max="30" label="the value of the end length" help="default 10, integers between 10 and 30
+"/>
+			<param name="input4" type="integer" value="50" min="1" max="2147483647" label="alignment threshold value" help="integers > 0"/>
+        </inputs>
+		<outputs>
+           <data format="fasta" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**Extend Overview**
+
+对已知顺序的contig用原始测序reads补gap.
+
+      </help>
+</tool>

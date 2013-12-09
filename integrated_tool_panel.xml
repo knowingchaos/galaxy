@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<toolbox>
+    <section id="transfer" name="File Transfer" version="">
+        <tool id="upload1" />
+    </section>
+    <section id="convert" name="Convert Formats" version="">
+        <tool id="axt_to_concat_fasta" />
+        <tool id="axt_to_fasta" />
+        <tool id="axt_to_lav_1" />
+        <tool id="bed2gff1" />
+        <tool id="fasta2tab" />
+        <tool id="gff2bed1" />
+        <tool id="lav_to_bed1" />
+        <tool id="MAF_To_BED1" />
+        <tool id="MAF_To_Interval1" />
+        <tool id="MAF_To_Fasta1" />
+        <tool id="tab2fasta" />
+        <tool id="fastq_to_fasta_python" />
+        <tool id="wiggle2simple1" />
+        <tool id="Sff_extractor" />
+        <tool id="gtf2bedgraph" />
+        <tool id="wig_to_bigWig" />
+        <tool id="bed_to_bigBed" />
+    </section>
+    <section id="quality control" name="NGS: Quality control" version="">
+        <label id="fastqcsambam" text="FastQC: fastq/sam/bam" version="" />
+        <tool id="fastqc" />
+        <label id="illumina" text="Illumina fastq" version="" />
+        <tool id="fastq_groomer" />
+        <tool id="fastq_paired_end_splitter" />
+        <tool id="fastq_paired_end_joiner" />
+        <tool id="fastq_stats" />
+        <label id="solid" text="AB-SOLiD data" version="" />
+        <tool id="solid2fastq" />
+        <tool id="solid_qual_stats" />
+        <tool id="solid_qual_boxplot" />
+        <label id="generic_fastq" text="Generic FASTQ manipulation" version="" />
+        <tool id="fastq_filter" />
+        <tool id="fastq_trimmer" />
+        <tool id="fastq_quality_trimmer" />
+        <tool id="fastq_masker_by_quality" />
+        <tool id="fastq_paired_end_interlacer" />
+        <tool id="fastq_paired_end_deinterlacer" />
+        <tool id="fastq_manipulation" />
+        <tool id="fastq_to_fasta_python" />
+        <tool id="fastq_to_tabular" />
+        <tool id="tabular_to_fastq" />
+        <label id="fastx_toolkit" text="FASTX-Toolkit for FASTQ data" version="" />
+        <tool id="cshl_fastq_quality_converter" />
+        <tool id="cshl_fastx_quality_statistics" />
+        <tool id="cshl_fastq_quality_boxplot" />
+        <tool id="cshl_fastx_nucleotides_distribution" />
+        <tool id="cshl_fastq_to_fasta" />
+        <tool id="cshl_fastq_quality_filter" />
+        <tool id="cshl_fastx_artifacts_filter" />
+        <tool id="cshl_fastx_barcode_splitter" />
+        <tool id="cshl_fastx_clipper" />
+        <tool id="cshl_fastx_collapser" />
+        <tool id="cshl_fastx_renamer" />
+        <tool id="cshl_fastx_reverse_complement" />
+        <tool id="cshl_fastx_trimmer" />
+    </section>
+    <section id="genome assembly roche-454" name="NGS:Genome Assembly (Roche-454)" version="">
+        <tool id="runAssembly" />
+        <tool id="runAssembly_cDNA" />
+        <tool id="runMapping" />
+        <tool id="runMapping_cDNA" />
+        <tool id="sfffile" />
+    </section>
+    <section id="genome assembly illumina" name="NGS:Genome Assembly (Illumina)" version="">
+    </section>
+    <section id="genome assembly" name="NGS:Genome Assembly (Illumina)" version="">
+    </section>
+    <section id="rna-seq assembly" name="NGS: RNA-Seq Assembly" version="">
+    </section>
+    <section id="rna analysis" name="NGS: RNA Analysis" version="">
+        <label id="mapping" text="Mapping" version="" />
+        <tool id="bowtie2" />
+        <tool id="bfast_wrapper" />
+        <tool id="megablast_wrapper" />
+        <tool id="megablast_xml_parser" />
+        <tool id="PerM" />
+        <tool id="srma_wrapper" />
+        <tool id="mosaik_wrapper" />
+        <label id="rna-seq" text="RNA-seq" version="" />
+        <tool id="tophat" />
+        <tool id="tophat2" />
+        <tool id="tophat_color" />
+        <tool id="cufflinks" />
+        <tool id="cuffcompare" />
+        <tool id="cuffmerge" />
+        <tool id="cuffdiff" />
+        <tool id="express" />
+        <label id="filtering" text="Filtering" version="" />
+        <tool id="filter_combined_via_tracking" />
+    </section>
+    <section id="quantify" name="NGS: Quantify" version="">
+    </section>
+    <section id="differential expression" name="NGS: Differential Expression" version="">
+    </section>
+    <section id="indel_analysis" name="NGS: Indel Analysis" version="">
+        <tool id="sam_indel_filter" />
+        <tool id="indel_sam2interval" />
+        <tool id="indel_table" />
+        <tool id="indel_analysis" />
+    </section>
+    <section id="samtools" name="NGS: SAM Tools" version="">
+        <tool id="sam_bw_filter" />
+        <tool id="sam2interval" />
+        <tool id="sam_to_bam" />
+        <tool id="bam_to_sam" />
+        <tool id="sam_merge2" />
+        <tool id="samtools_mpileup" />
+        <tool id="sam_pileup" />
+        <tool id="pileup_parser" />
+        <tool id="pileup_interval" />
+        <tool id="samtools_flagstat" />
+        <tool id="samtools_rmdup" />
+        <tool id="samtools_slice_bam" />
+    </section>
+    <section id="gatk" name="NGS: GATK Tools" version="">
+        <label id="gatk_bam_utilities" text="Alignment Utilities" version="" />
+        <tool id="gatk_depth_of_coverage" />
+        <tool id="gatk_print_reads" />
+        <label id="gatk_realignment" text="Realignment" version="" />
+        <tool id="gatk_realigner_target_creator" />
+        <tool id="gatk_indel_realigner" />
+        <label id="gatk_recalibration" text="Base Recalibration" version="" />
+        <tool id="gatk_count_covariates" />
+        <tool id="gatk_table_recalibration" />
+        <tool id="gatk_analyze_covariates" />
+        <label id="gatk_genotyping" text="Genotyping" version="" />
+        <tool id="gatk_unified_genotyper" />
+        <label id="gatk_annotation" text="Annotation" version="" />
+        <tool id="gatk_variant_annotator" />
+        <label id="gatk_filtration" text="Filtration" version="" />
+        <tool id="gatk_variant_filtration" />
+        <tool id="gatk_variant_select" />
+        <label id="gatk_variant_quality_score_recalibration" text="Variant Quality Score Recalibration" version="" />
+        <tool id="gatk_variant_recalibrator" />
+        <tool id="gatk_variant_apply_recalibration" />
+        <label id="gatk_variant_utilities" text="Variant Utilities" version="" />
+        <tool id="gatk_validate_variants" />
+        <tool id="gatk_variant_eval" />
+        <tool id="gatk_variant_combine" />
+    </section>
+    <section id="peak_calling" name="NGS: Peak Calling" version="">
+        <tool id="peakcalling_macs" />
+        <tool id="peakcalling_sicer" />
+        <tool id="peakcalling_ccat" />
+        <tool id="bed2genetrack" />
+        <tool id="predict2genetrack" />
+    </section>
+    <section id="vcf_tools" name="NGS:VCF Tools" version="">
+        <tool id="vcf_intersect" />
+        <tool id="vcf_annotate" />
+        <tool id="vcf_filter" />
+        <tool id="vcf_extract" />
+    </section>
+    <section id="BMI.IME" name="BMI.IME" version="">
+        <tool id="bwa_0_7_5" />
+        <tool id="fa_gc_content_1" />
+        <tool id="extend_end" />
+        <tool id="blast2tab+e" />
+        <tool id="Extract_feature_gb" />
+        <tool id="Extract_inform_gb" />
+        <tool id="fastq_reverse" />
+        <tool id="fq_all2std" />
+        <tool id="ionMP_split" />
+        <tool id="rev_com_rev" />
+        <tool id="reverse_complement" />
+        <tool id="shuffleSequences_fasta" />
+        <tool id="shuffleSequences_fastq" />
+        <tool id="SNP_replace" />
+        <tool id="fastx_barcode_splitter" />
+        <tool id="GapCloser" />
+        <tool id="SOAPdenovo-127mer" />
+        <tool id="sff_extract_0_3_0" />
+        <tool id="bwa_index" />
+        <tool id="bwa_aln" />
+        <tool id="bwa_samse" />
+    </section>
+    <section id="bwa" name="bwa" version="">
+        <tool id="42.96.173.25:9009/repos/devteam/bwa_wrappers/bwa_wrapper/1.2.3" />
+        <tool id="42.96.173.25:9009/repos/devteam/bwa_wrappers/bwa_color_wrapper/1.0.2" />
+    </section>
+    <section id="bwa2" name="bwa2" version="">
+        <tool id="42.96.173.25:9009/repos/curtish/bwa_tools_mini/bwa_color_wrapper/1.0.2" />
+        <tool id="42.96.173.25:9009/repos/curtish/bwa_tools_mini/bwa_wrapper/1.2.3" />
+    </section>
+</toolbox>

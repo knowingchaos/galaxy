@@ -1,0 +1,23 @@
+﻿<tool id="fq_all2std" name="Fq_all2std">
+	<description></description>
+	  <command interpreter="perl">fq_all2std.pl $command $input > $output</command>
+	    <inputs>
+			<param name="command" type="select" label="Command">
+				<option value="scarf2std">scarf2std</option>
+				<option value="fqint2std">fqint2std</option>
+				<option value="sol2std">sol2std</option>
+				<option value="fa2std">fa2std</option>
+				<option value="fq2fa">fq2fa</option>
+			</param>
+			<param format="fastq" name="input" type="data" label="input file" />
+                        <param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="txt" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**Fq_all2std Overview**
+
+对fastq文件做格式转换。
+      </help>
+</tool>

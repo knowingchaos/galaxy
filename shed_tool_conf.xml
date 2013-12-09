@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<toolbox tool_path="../shed_tools">
+<section id="bwa" name="bwa" version="">
+      <tool file="42.96.173.25/repos/devteam/bwa_wrappers/69befa8323e6/bwa_wrappers/bwa_wrappers-150b3fe44caa/bwa_wrapper.xml" guid="42.96.173.25:9009/repos/devteam/bwa_wrappers/bwa_wrapper/1.2.3">
+          <tool_shed>42.96.173.25:9009</tool_shed>
+            <repository_name>bwa_wrappers</repository_name>
+            <repository_owner>devteam</repository_owner>
+            <installed_changeset_revision>69befa8323e6</installed_changeset_revision>
+            <id>42.96.173.25:9009/repos/devteam/bwa_wrappers/bwa_wrapper/1.2.3</id>
+            <version>1.2.3</version>
+        </tool>
+        <tool file="42.96.173.25/repos/devteam/bwa_wrappers/69befa8323e6/bwa_wrappers/bwa_wrappers-150b3fe44caa/bwa_color_wrapper.xml" guid="42.96.173.25:9009/repos/devteam/bwa_wrappers/bwa_color_wrapper/1.0.2">
+          <tool_shed>42.96.173.25:9009</tool_shed>
+            <repository_name>bwa_wrappers</repository_name>
+            <repository_owner>devteam</repository_owner>
+            <installed_changeset_revision>69befa8323e6</installed_changeset_revision>
+            <id>42.96.173.25:9009/repos/devteam/bwa_wrappers/bwa_color_wrapper/1.0.2</id>
+            <version>1.0.2</version>
+        </tool>
+    </section>
+    
+<section id="bwa2" name="bwa2" version="">
+      <tool file="42.96.173.25/repos/curtish/bwa_tools_mini/f43dac75355c/bwa_tools_mini/bwa_tools_mini-11eda1d95d84/bwa_color_wrapper.xml" guid="42.96.173.25:9009/repos/curtish/bwa_tools_mini/bwa_color_wrapper/1.0.2">
+          <tool_shed>42.96.173.25:9009</tool_shed>
+            <repository_name>bwa_tools_mini</repository_name>
+            <repository_owner>curtish</repository_owner>
+            <installed_changeset_revision>f43dac75355c</installed_changeset_revision>
+            <id>42.96.173.25:9009/repos/curtish/bwa_tools_mini/bwa_color_wrapper/1.0.2</id>
+            <version>1.0.2</version>
+        </tool>
+        <tool file="42.96.173.25/repos/curtish/bwa_tools_mini/f43dac75355c/bwa_tools_mini/bwa_tools_mini-11eda1d95d84/bwa_wrapper.xml" guid="42.96.173.25:9009/repos/curtish/bwa_tools_mini/bwa_wrapper/1.2.3">
+          <tool_shed>42.96.173.25:9009</tool_shed>
+            <repository_name>bwa_tools_mini</repository_name>
+            <repository_owner>curtish</repository_owner>
+            <installed_changeset_revision>f43dac75355c</installed_changeset_revision>
+            <id>42.96.173.25:9009/repos/curtish/bwa_tools_mini/bwa_wrapper/1.2.3</id>
+            <version>1.2.3</version>
+        </tool>
+    </section>
+    
+</toolbox>

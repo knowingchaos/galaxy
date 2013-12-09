@@ -1,0 +1,11 @@
+<tool id="sff_to_fastq" name="Sff to Fastq Converter" version="1.0.0">
+	<description></description>
+	<command interpreter='perl'>sff_to_fastq_converter.pl $input $output.extra_files_path $output</command>
+	<inputs>
+		<param name="input" type="data" format="sff" label="Roche/454 Sff"/>
+	</inputs>
+	<outputs>
+		<data name="output" format="fastq"/>
+	</outputs>
+	<help>Convert Sff to Fastq</help>
+</tool>

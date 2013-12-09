@@ -1,0 +1,16 @@
+﻿<tool id="fastq_reverse" name="Fastq_reverse">
+	<description></description>
+	  <command interpreter="python">fastq_reverse.py $input $output</command>
+	    <inputs>
+			<param format="fastq" name="input" type="data" label="input file" />
+                        <param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="fastq" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**Fastq_reverse Overview**
+
+从genbank文件中提取出序列的通用信息。
+      </help>
+</tool>

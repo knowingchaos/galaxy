@@ -1,0 +1,16 @@
+﻿<tool id="reverse_complement" name="Reverse_complement">
+	<description></description>
+	  <command interpreter="perl">reverse_complement.pl $input $output</command>
+	    <inputs>
+			<param format="fasta" name="input" type="data" label="input file" />
+			<param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="fasta" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**Reverse_complement Overview**
+
+对文件中的所有contig进行反向互补。
+      </help>
+</tool>

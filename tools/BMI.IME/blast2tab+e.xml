@@ -1,0 +1,17 @@
+<tool id="blast2tab+e" name="Blast2tab+e">
+	<description></description>
+	  <command interpreter="python">blast2tab-n1+e.py $input $output $n</command>
+	    <inputs>
+			<param format="txt" name="input" type="data" label="input file" />
+			<param  name="outputfilename" type="text" label="output file name" />
+			<param name="n" type="integer" value=""  label="n值" help="输出前n条结果的第1段"/>
+        </inputs>
+		<outputs>
+           <data format="txt" name="output" label="${outputfilename}" />
+        </outputs>
+	  <help>
+**Blast2tab+e Overview**
+
+对blast结果进行编辑、简化。
+      </help>
+</tool>

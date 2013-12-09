@@ -1,0 +1,17 @@
+﻿<tool id="shuffleSequences_fasta" name="ShuffleSequences_fasta">
+	<description></description>
+	  <command interpreter="perl">shuffleSequences_fasta.pl $input1 $input2 $output</command>
+	    <inputs>
+			<param format="fasta" name="input1" type="data" label="input file1" />
+			<param format="fasta" name="input2" type="data" label="input file2" />
+			<param  name="outputfilename" type="text" label="output file name" />
+		</inputs>
+		<outputs>
+           <data format="fasta" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**ShuffleSequences_fasta Overview**
+
+把两个都为fasta格式的序列文件交叉为一个fasta格式文件。
+      </help>
+</tool>

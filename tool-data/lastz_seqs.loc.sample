@@ -1,0 +1,188 @@
+#This is a sample file distributed with Galaxy that enables tools
+#to use a directory of 2bit genome files for use with Lastz. You will
+#need to supply these files and then create a lastz_seqs.loc file
+#similar to this one (store it in this directory) that points to
+#the directories in which those files are stored. The lastz_seqs.loc
+#file has this format (white space characters are TAB characters):
+#
+#<unique_build_id>   <display_name>   <file_path>
+#
+#So, for example, if your lastz_seqs.loc began like this:
+#
+#hg18   Human (Homo sapiens): hg18   /depot/data2/galaxy/twobit/hg18.2bit
+#hg19   Human (Homo sapiens): hg19   /depot/data2/galaxy/twobit/hg19.2bit
+#mm9    Mouse (Mus musculus): mm9    /depot/data2/galaxy/twobit/mm9.2bit
+#
+#then your /depot/data2/galaxy/twobit/ directory
+#would need to contain the following 2bit files:
+#
+#-rw-r--r--  1 james    universe 830134 2005-09-13 10:12 hg18.2bit
+#-rw-r--r--  1 james    universe 527388 2005-09-13 10:12 hg19.2bit
+#-rw-r--r--  1 james    universe 269808 2005-09-13 10:12 mm9.2bit
+#
+#Your lastz_seqs.loc file should include an entry per line for 
+#each file you have stored that you want to be available. Note that 
+#your files should all have the extension '2bit'.
+#
+#Note that for backwards compatibility with workflows, the unique ID of
+#an entry must be the path that was in the original loc file, because that
+#is the value stored in the workflow for that parameter. 
+#
+AaegL1	Mosquito (Aedes aegypti): AaegL1	/galaxy/data/AaegL1/seq/AaegL1.2bit
+AgamP3	Mosquito (Anopheles gambiae): AgamP3	/galaxy/data/AgamP3/seq/AgamP3.2bit
+Araly1	Arabidopsis lyrata: Araly1	/galaxy/data/Araly1/seq/Araly1.2bit
+dasNov1	Armadillo (Dasypus novemcinctus): dasNov1	/galaxy/data/dasNov1/seq/dasNov1.2bit
+baciSubt	Bacillus subtilis subsp. subtilis str. 168: baciSubt	/galaxy/data/microbes/baciSubt/seq/baciSubt.2bit
+bordBron	Bordetella bronchiseptica str. RB50: bordBron	/galaxy/data/microbes/bordBron/seq/bordBron.2bit
+borEut13	Boreoeutherian: borEut13	/galaxy/data/borEut13/seq/borEut13.2bit
+13953	Burkholderia pseudomallei 668: 13953	/galaxy/data/microbes/13953/seq/burkPseu_668.2bit
+burkPseu_1106A	Burkholderia pseudomallei 1106a: burkPseu_1106A	/galaxy/data/microbes/burkPseu_1106A/seq/burkPseu_1106A.2bit
+13954	Burkholderia pseudomallei 1710b: 13954	/galaxy/data/microbes/13954/seq/burkPseu_1710B.2bit
+178	Burkholderia pseudomallei K96243: 178	/galaxy/data/microbes/178/seq/burkPseu_K96243.2bit
+otoGar1	Bushbaby (Otolemur garnetti): otoGar1	/galaxy/data/otoGar1/seq/otoGar1.2bit
+caePb1	Caenorhabditis brenneri: caePb1	/galaxy/data/caePb1/seq/caePb1.2bit
+caePb2	Caenorhabditis brenneri: caePb2	/galaxy/data/caePb2/seq/caePb2.2bit
+cb3	Caenorhabditis briggsae: cb3	/galaxy/data/cb3/seq/cb3full.2bit
+ce2	Caenorhabditis elegans: ce2	/galaxy/data/ce2/seq/ce2.2bit
+ce4	Caenorhabditis elegans: ce4	/galaxy/data/ce4/seq/ce4.2bit
+/galaxy/data/ce6/seq/ce6.2bit	Caenorhabditis elegans: ce6	/galaxy/data/ce6/seq/ce6.2bit
+ce10	Caenorhabditis elegans: ce10	/galaxy/data/ce10/seq/ce10.2bit
+caeJap1	Caenorhabditis japonica: caeJap1	/galaxy/data/caeJap1/seq/caeJap1.2bit
+caeRem3	Caenorhabditis remanei: caeRem3	/galaxy/data/caeRem3/seq/caeRem3.2bit
+/galaxy/data/felCat3/seq/felCat3.2bit	Cat (Felis catus): felCat3	/galaxy/data/felCat3/seq/felCat3.2bit
+felCat4	Cat (Felis catus) Full: felCat4	/galaxy/data/felCat4/seq/felCat4full.2bit
+galGal2	Chicken (Gallus gallus): galGal2	/galaxy/data/galGal2/seq/galGal2.2bit
+/galaxy/data/galGal3/seq/galGal3.2bit	Chicken (Gallus gallus): galGal3	/galaxy/data/galGal3/seq/galGal3.2bit
+galGal4	Chicken (Gallus gallus): galGal4	/galaxy/data/galGal4/seq/galGal4.2bit
+panTro1	Chimpanzee (Pan troglodytes): panTro1	/galaxy/data/panTro1/seq/panTro1.2bit
+panTro2	Chimpanzee (Pan troglodytes): panTro2	/galaxy/data/panTro2/seq/panTro2.2bit
+panTro3	Chimpanzee (Pan troglodytes): panTro3	/galaxy/data/panTro3/seq/panTro3.2bit
+ci2	Ciona intestinalis Full: ci2	/galaxy/data/ci2/seq/ci2full.2bit
+sorAra1	Common Shrew (Sorex araneus): sorAra1	/galaxy/data/sorAra1/seq/sorAra1.2bit
+bosTau2	Cow (Bos taurus): bosTau2	/galaxy/data/bosTau2/seq/bosTau2.2bit
+bosTau3	Cow (Bos taurus): bosTau3	/galaxy/data/bosTau3/seq/bosTau3.2bit
+/galaxy/data/bosTau4/seq/bosTau4.2bit	Cow (Bos taurus): bosTau4	/galaxy/data/bosTau4/seq/bosTau4.2bit
+bosTau6	Cow (Bos taurus): bosTau6	/galaxy/data/bosTau6/seq/bosTau6.2bit
+bosTauMd3	Cow (Bos taurus): bosTauMd3	/galaxy/data/bosTauMd3/seq/bosTauMd3.2bit
+CpipJ1	Mosquito (Culex quinquefasciatus): CpipJ1	/galaxy/data/CpipJ1/seq/CpipJ1.2bit
+canFam1	Dog (Canis lupus familiaris): canFam1	/galaxy/data/canFam1/seq/canFam1.2bit
+/galaxy/data/canFam2/seq/canFam2.2bit	Dog (Canis lupus familiaris): canFam2	/galaxy/data/canFam2/seq/canFam2.2bit
+loxAfr3	Elephant (Loxodonta africana africana): loxAfr3	/galaxy/data/loxAfr3/seq/loxAfr3.2bit
+ente638	Enterobacter sp. 638: ente638	/galaxy/data/microbes/ente638/seq/enterobacter_sp_638.2bit
+eschColi_APEC_O1	Escherichia coli (APEC O1): eschColi_APEC_O1	/galaxy/data/microbes/eschColi_APEC_O1/seq/eschColi_APEC_O1.2bit
+eschColi_CFT073	Escherichia coli (CFT073): eschColi_CFT073	/galaxy/data/microbes/eschColi_CFT073/seq/eschColi_CFT073.2bit
+20079	Escherichia coli (str. K-12 substr. DH10B): 20079	/galaxy/data/microbes/20079/seq/eschColi_DH10B.2bit
+eschColi_K12	Escherichia coli (str. K-12 substr. MG1655): eschColi_K12	/galaxy/data/microbes/eschColi_K12/seq/eschColi_K12.2bit
+16351	Escherichia coli (str. K-12 substr. W3110): 16351	/galaxy/data/microbes/16351/seq/eschColi_W3110.2bit
+eschColi_EC4115	Escherichia coli (str. O157H7 substr. EC4115): eschColi_EC4115	/galaxy/data/microbes/eschColi_EC4115/seq/eschColi_EC4115.2bit
+259	Escherichia coli (str. O157H7 substr. EDL933): 259	/galaxy/data/microbes/259/seq/eschColi_EDL933.2bit
+eschColi_O157H7	Escherichia coli (str. O157H7 substr. Sakai): eschColi_O157H7	/galaxy/data/microbes/eschColi_O157H7/seq/eschColi_O157H7_Sakai.2bit
+eschColi_TW14359	Escherichia coli (str. O157H7 substr. TW14359): eschColi_TW14359	/galaxy/data/microbes/eschColi_TW14359/seq/eschColi_TW14359.2bit
+Schizosaccharomyces_pombe_1.1	Fission Yeast (Schizosaccharomyces pombe): Schizosaccharomyces_pombe_1.1	/galaxy/data/Schizosaccharomyces_pombe_1.1/seq/Schizosaccharomyces_pombe_1.1.2bit
+/galaxy/data/xenTro2/seq/xenTro2.2bit	Frog (Xenopus tropicalis): xenTro2	/galaxy/data/xenTro2/seq/xenTro2.2bit
+/galaxy/data/droAna1/droAna1.2bit	Fruit Fly (Drosophila ananassae): droAna1	/galaxy/data/droAna1/seq/droAna1.2bit
+/galaxy/data/droAna2/droAna2.2bit	Fruit Fly (Drosophila ananassae): droAna2	/galaxy/data/droAna2/seq/droAna2.2bit
+/galaxy/data/droAna3/droAna3.2bit	Fruit Fly (Drosophila ananassae): droAna3	/galaxy/data/droAna3/seq/droAna3.2bit
+/galaxy/data/droEre1/droEre1.2bit	Fruit Fly (Drosophila erecta): droEre1	/galaxy/data/droEre1/seq/droEre1.2bit
+/galaxy/data/droEre2/droEre2.2bit	Fruit Fly (Drosophila erecta): droEre2	/galaxy/data/droEre2/seq/droEre2.2bit
+/galaxy/data/droGri1/droGri1.2bit	Fruit Fly (Drosophila grimshawi): droGri1	/galaxy/data/droGri1/seq/droGri1.2bit
+/galaxy/data/droGri2/droGri2.2bit	Fruit Fly (Drosophila grimshawi): droGri2	/galaxy/data/droGri2/seq/droGri2.2bit
+dm2	Fruit Fly (Drosophila melanogaster): dm2	/galaxy/data/dm2/seq/dm2.2bit
+/galaxy/data/dm3/seq/dm3.2bit	Fruit Fly (Drosophila melanogaster): dm3	/galaxy/data/dm3/seq/dm3.2bit
+/galaxy/data/droMoj1/droMoj1.2bit	Fruit Fly (Drosophila mojavensis): droMoj1	/galaxy/data/droMoj1/seq/droMoj1.2bit
+/galaxy/data/droMoj2/droMoj2.2bit	Fruit Fly (Drosophila mojavensis): droMoj2	/galaxy/data/droMoj2/seq/droMoj2.2bit
+/galaxy/data/droMoj3/droMoj3.2bit	Fruit Fly (Drosophila mojavensis): droMoj3	/galaxy/data/droMoj3/seq/droMoj3.2bit
+/galaxy/data/droPer1/droPer1.2bit	Fruit Fly (Drosophila persimilis): droPer1	/galaxy/data/droPer1/seq/droPer1.2bit
+dp3	Fruit Fly (Drosophila pseudoobscura): dp3	/galaxy/data/dp3/seq/dp3.2bit
+dp4	Fruit Fly (Drosophila pseudoobscura): dp4	/galaxy/data/dp4/seq/dp4.2bit
+/galaxy/data/droSec1/droSec1.2bit	Fruit Fly (Drosophila sechellia): droSec1	/galaxy/data/droSec1/seq/droSec1.2bit
+droSim1	Fruit Fly (Drosophila simulans): droSim1	/galaxy/data/droSim1/seq/droSim1.2bit
+/galaxy/data/droVir1/droVir1.2bit	Fruit Fly (Drosophila virilis): droVir1	/galaxy/data/droVir1/seq/droVir1.2bit
+/galaxy/data/droVir2/droVir2.2bit	Fruit Fly (Drosophila virilis): droVir2	/galaxy/data/droVir2/seq/droVir2.2bit
+/galaxy/data/droVir3/droVir3.2bit	Fruit Fly (Drosophila virilis): droVir3	/galaxy/data/droVir3/seq/droVir3.2bit
+droWil1	Fruit Fly (Drosophila willistoni): droWil1	/galaxy/data/droWil1/seq/droWil1.2bit
+droYak1	Fruit Fly (Drosophila yakuba): droYak1	/galaxy/data/droYak1/seq/droYak1.2bit
+droYak2	Fruit Fly (Drosophila yakuba): droYak2	/galaxy/data/droYak2/seq/droYak2.2bit
+fr1	Fugu (Takifugu rubripes): fr1	/galaxy/data/fr1/seq/fr1.2bit
+fr2	Fugu (Takifugu rubripes): fr2	/galaxy/data/fr2/seq/fr2.2bit
+nomLeu1	Northern White-cheeked Gibbon (Nomascus leucogenys): nomLeu1	/galaxy/data/nomLeu1/seq/nomLeu1.2bit
+cavPor3	Guinea Pig (Cavia porcellus): cavPor3	/galaxy/data/cavPor3/seq/cavPor3.2bit
+eriEur1	Hedgehog (Erinaceus europaeus): eriEur1	/galaxy/data/eriEur1/seq/eriEur1.2bit
+apiMel1	Honeybee (Apis mellifera): apiMel1	/galaxy/data/apiMel1/seq/apiMel1.2bit
+/galaxy/data/apiMel2/apiMel2.2bit	Honeybee (Apis mellifera): apiMel2	/galaxy/data/apiMel2/seq/apiMel2.2bit
+/galaxy/data/apiMel3/seq/apiMel3.2bit	Honeybee (Apis mellifera): apiMel3	/galaxy/data/apiMel3/seq/apiMel3.2bit
+equCab1	Horse (Equus caballus): equCab1	/galaxy/data/equCab1/seq/equCab1.2bit
+/galaxy/data/equCab2/seq/equCab2.2bit	Horse (Equus caballus): equCab2	/galaxy/data/equCab2/seq/equCab2.2bit
+gorGor3	Gorilla gorilla: gorGor3	/galaxy/data/gorGor3/seq/gorGor3.2bit
+hg17	Human (Homo sapiens): hg17	/galaxy/data/hg17/seq/hg17.2bit
+/galaxy/data/hg18/seq/hg18.2bit	Human (Homo sapiens): hg18	/galaxy/data/hg18/seq/hg18.2bit
+/galaxy/data/hg18/seq/chr21.2bit	Human (Homo sapiens): hg18 chr21	/galaxy/data/hg18/seq/chr21.2bit
+/galaxy/data/hg19/seq/hg19.2bit	Human (Homo sapiens): hg19	/galaxy/data/hg19/seq/hg19.2bit
+hg_g1k_v37	Human (Homo sapiens) (Broad b37): hg_g1k_v37	/galaxy/data/hg_g1k_v37/seq/hg_g1k_v37.2bit
+Homo_sapiens_nuHg19_mtrCRS	Human (Homo sapiens) (hg19 with mtDNA replaced with rCRS): Homo_sapiens_nuHg19_mtrCRS	/galaxy/data/Homo_sapiens_nuHg19_mtrCRS/seq/Homo_sapiens_nuHg19_mtrCRS.2bit
+Homo_sapiens_AK1	Human (Homo sapiens) (Korean Man AK1): Homo_sapiens_AK1	/galaxy/data/Homo_sapiens_AK1/seq/Homo_sapiens_AK1.2bit
+venter1	Human (Homo sapiens) (J. Craig Venter): venter1	/galaxy/data/venter1/seq/venter1.2bit
+Hydra_JCVI	Hydra magnipapillata: Hydra_JCVI	/galaxy/data/Hydra_JCVI/seq/Hydra_JCVI.2bit
+IscaW1	Deer Tick (Ixodes scapularis): IscaW1	/galaxy/data/IscaW1/seq/IscaW1.2bit
+petMar1	Lamprey (Petromyzon marinus): petMar1	/galaxy/data/petMar1/seq/petMar1.2bit
+braFlo1	Lancelet (Branchiostoma floridae): braFlo1	/galaxy/data/braFlo1/seq/braFlo1.2bit
+lMaj5	Leishmania major: lMaj5	/galaxy/data/lMaj5/seq/lMaj5.2bit
+myoLuc2	Little Brown Bat (Myotis lucifugus): myoLuc2	/galaxy/data/myoLuc2/seq/myoLuc2.2bit
+/galaxy/data/anoCar1/anoCar1.2bit	Lizard (Anolis carolinensis): anoCar1	/galaxy/data/anoCar1/seq/anoCar1.2bit
+anoCar2	Lizard (Anolis carolinensis): anoCar2	/galaxy/data/anoCar2/seq/anoCar2.2bit
+Zea_mays_B73_RefGen_v2	Maize (Zea mays): Zea_mays_B73_RefGen_v2	/galaxy/data/Zea_mays_B73_RefGen_v2/seq/Zea_mays_B73_RefGen_v2.2bit
+/galaxy/data/calJac1/calJac1.2bit	Marmoset (Callithrix jacchus): calJac1	/galaxy/data/calJac1/seq/calJac1.2bit
+calJac3	Marmoset (Callithrix jacchus): calJac3	/galaxy/data/calJac3/seq/calJac3.2bit
+oryLat1	Medaka (Oryzias latipes): oryLat1	/galaxy/data/oryLat1/seq/oryLat1.2bit
+oryLat2	Medaka (Oryzias latipes): oryLat2	/galaxy/data/oryLat2/seq/oryLat2.2bit
+27835	Microcystis aeruginosa NIES-843: 27835	/galaxy/data/microbes/27835/seq/27835.2bit
+/galaxy/data/anoGam1/anoGam1.2bit	Mosquito (Anopheles gambiae): anoGam1	/galaxy/data/anoGam1/seq/anoGam1.2bit
+/galaxy/data/mm8/seq/mm8.2bit	Mouse (Mus musculus): mm8	/galaxy/data/mm8/seq/mm8.2bit
+/galaxy/data/mm9/seq/mm9.2bit	Mouse (Mus musculus): mm9	/galaxy/data/mm9/seq/mm9.2bit
+mm10	Mouse (Mus musculus): mm10	/galaxy/data/mm10/seq/mm10.2bit
+arabidopsis	Mouse-ear Cress (Arabidopsis thaliana): Arabidopsis_thaliana_TAIR9	/galaxy/data/Arabidopsis_thaliana_TAIR9/seq/Arabidopsis_thaliana_TAIR9.2bit
+monDom4	Opossum (Monodelphis domestica): monDom4	/galaxy/data/monDom4/seq/monDom4.2bit
+monDom5	Opossum (Monodelphis domestica): monDom5	/galaxy/data/monDom5/seq/monDom5.2bit
+ponAbe2	Orangutan (Pongo pygmaeus abelii): ponAbe2	/galaxy/data/ponAbe2/seq/ponAbe2.2bit
+ailMel1	Panda (Ailuropoda melanoleuca): ailMel1	/galaxy/data/ailMel1/seq/ailMel1.2bit
+PhumU1	Head Louse (Pediculus humanus): PhumU1	/galaxy/data/PhumU1/seq/PhumU1.2bit
+/galaxy/data/phiX/seq/phiX.2bit	phiX174 (AF176034)	/galaxy/data/phiX/seq/phiX.2bit
+/galaxy/data/Sscrofa9.58/seq/Sscrofa9.58.2bit	Pig (Sus scrofa): Sscrofa9.58 (SGSC)	/galaxy/data/Sscrofa9.58/seq/Sscrofa9.58.2bit
+Ptrichocarpa_156	Poplar (Populus trichocarpa): Ptrichocarpa_156	/galaxy/data/Ptrichocarpa_156/seq/Ptrichocarpa_156.2bit
+/galaxy/data/susScr2/seq/susScr2.2bit	Pig (Sus scrofa): susScr2	/galaxy/data/susScr2/seq/susScr2.2bit
+/galaxy/data/ornAna1/seq/ornAna1.2bit	Platypus (Ornithorhynchus anatinus): ornAna1	/galaxy/data/ornAna1/seq/ornAna1.2bit
+priPac1	Pristionchus pacificus: priPac1	/galaxy/data/priPac1/seq/priPac1.2bit
+16720	Pseudomonas aeruginos (str. PA7): 16720	/galaxy/data/microbes/16720/seq/pseuAeru_PA7.2bit
+pseuAeru	Pseudomonas aeruginos (str. PAO1): pseuAeru	/galaxy/data/microbes/pseuAeru/seq/pseuAeru_PAO1.2bit
+386	Pseudomonas aeruginos (str. UCBPP-PA14): 386	/galaxy/data/microbes/386/seq/pseuAeru_UCBPP_PA14.2bit
+/galaxy/data/strPur2/seq/strPur2.2bit	Purple Sea Urchin (Strongylocentrotus purpuratus): strPur2	/galaxy/data/strPur2/seq/strPur2.2bit
+strPur3	Purple Sea Urchin (Strongylocentrotus purpuratus): strPur3	/galaxy/data/strPur3/seq/strPur3.2bit
+278	Streptococcus pneumoniae (str. R6): 278	/galaxy/data/microbes/278/seq/278.2bit
+Spur_v2.6	Purple Sea Urchin (Strongylocentrotus purpuratus): Spur_v2.6	/galaxy/data/Spur_v2.6/seq/Spur_v2.6.2bit
+oryCun1	Rabbit (Oryctolagus cuniculus): oryCun1	/galaxy/data/oryCun1/seq/oryCun1.2bit
+oryCun2	Rabbit (Oryctolagus cuniculus): oryCun2	/galaxy/data/oryCun2/seq/oryCun2.2bit
+rn3	Rat (Rattus norvegicus): rn3	/galaxy/data/rn3/seq/rn3.2bit
+/galaxy/data/rn4/seq/rn4.2bit	Rat (Rattus norvegicus): rn4	/galaxy/data/rn4/seq/rn4.2bit
+/galaxy/data/rheMac2/seq/rheMac2.2bit	Rhesus Macaque (Macaca mulatta): rheMac2	/galaxy/data/rheMac2/seq/rheMac2.2bit
+oryza_sativa_japonica_nipponbare_IRGSP4.0	Rice (Oryza sativa): oryza_sativa_japonica_nipponbare_IRGSP4.0	/galaxy/data/oryza_sativa_japonica_nipponbare_IRGSP4.0/seq/oryza_sativa_japonica_nipponbare_IRGSP4.0.2bit
+aplCal1	Sea Hare (Aplysia californica): aplCal1	/galaxy/data/aplCal1/seq/aplCal1.2bit
+oviAri1	Sheep (Ovis aries): oviAri1	/galaxy/data/oviAri1/seq/oviAri1.2bit
+Bombyx_mori_p50T_2.0	Silkworm (Bombyx mori str. p50T): Bombyx_mori_p50T_2.0	/galaxy/data/Bombyx_mori_p50T_2.0/seq/Bombyx_mori_p50T_2.0.2bit
+gasAcu1	Stickleback (Gasterosteus aculeatus): gasAcu1	/galaxy/data/gasAcu1/seq/gasAcu1.2bit
+echTel1	Tenrec (Echinops telfairi): echTel1	/galaxy/data/echTel1/seq/echTel1.2bit
+tetNig1	Tetraodon (Tetraodon nigroviridis): tetNig1	/galaxy/data/tetNig1/seq/tetNig1.2bit
+tetNig2	Tetraodon (Tetraodon nigroviridis): tetNig2	/galaxy/data/tetNig2/seq/tetNig2.2bit
+tupBel1	Tree Shrew (Tupaia belangeri): tupBel1	/galaxy/data/tupBel1/seq/tupBel1.2bit
+triCas2	Tribolium castaneum: triCas2	/galaxy/data/triCas2/seq/triCas2.2bit
+Tcas_3.0	Tribolium castaneum: Tcas_3.0	/galaxy/data/Tcas_3.0/seq/Tcas_3.0.2bit
+12931	Xanthomonas oryzae str. KACC10331: 12931	/galaxy/data/microbes/12931/seq/Xanthomonas_oryzae_KACC10331.2bit
+16297	Xanthomonas oryzae str. MAFF_311018: 16297	/galaxy/data/microbes/16297/seq/Xanthomonas_oryzae_MAFF_311018.2bit
+Xanthomonas_oryzae_PXO99A	Xanthomonas oryzae str. PXO99A: Xanthomonas_oryzae_PXO99A	/galaxy/data/microbes/Xanthomonas_oryzae_PXO99A/seq/Xanthomonas_oryzae_PXO99A.2bit
+sacCer1	Yeast (Saccharomyces cerevisiae): sacCer1	/galaxy/data/sacCer1/seq/sacCer1.2bit
+/galaxy/data/sacCer2/seq/sacCer2	Yeast (Saccharomyces cerevisiae): sacCer2	/galaxy/data/sacCer2/seq/sacCer2.2bit
+Saccharomyces_cerevisiae_S288C_SGD2010	Yeast (Saccharomyces cerevisiae) str. S288C: Saccharomyces_cerevisiae_S288C_SGD2010	/galaxy/data/Saccharomyces_cerevisiae_S288C_SGD2010/seq/Saccharomyces_cerevisiae_S288C_SGD2010.2bit
+danRer4	Zebrafish (Danio rerio): danRer4	/galaxy/data/danRer4/seq/danRer4.2bit
+/galaxy/data/danRer5/seq/danRer5.2bit	Zebrafish (Danio rerio): danRer5	/galaxy/data/danRer5/seq/danRer5.2bit
+/galaxy/data/danRer6/seq/danRer6.2bit	Zebrafish (Danio rerio): danRer6	/galaxy/data/danRer6/seq/danRer6.2bit
+/galaxy/data/danRer6/seq/danRer7.2bit	Zebrafish (Danio rerio): danRer7	/galaxy/data/danRer7/seq/danRer7.2bit
+/galaxy/data/taeGut1/seq/taeGut1.2bit	Zebra Finch (Taeniopygia guttata): taeGut1	/galaxy/data/taeGut1/seq/taeGut1.2bit

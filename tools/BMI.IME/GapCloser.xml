@@ -1,0 +1,19 @@
+<tool id="GapCloser" name="GapCloser">
+	<description></description>
+	  <command interpreter="eval">
+	  ./GapCloser -b $input1 -a $input2 -o $output -p $x1 -t $x2</command>
+	    <inputs>
+			<param format="txt" name="input1" type="data" label="Input configure file" />
+			<param format="fasta" name="input2" type="data" label="Input scaffold file" />
+                        <param  name="outputfilename" type="text" label="output file name" />
+			<param name="x1" type="integer" value="25" max="31"  label="Overlap length/K value" help="(default 25, max 31)" />
+			<param name="x2" type="integer" value=""  label="Thread number" />
+        </inputs>
+		<outputs>
+           <data format="txt" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**GapCloser Overview**
+
+      </help>
+</tool>

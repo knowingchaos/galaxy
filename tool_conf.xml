@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<toolbox>
+  <section name="File Transfer" id="transfer">
+    <tool file="data_source/upload.xml"/>
+  </section>
+  <section name="Convert Formats" id="convert">
+    <tool file="filters/axt_to_concat_fasta.xml" />
+    <tool file="filters/axt_to_fasta.xml" />
+    <tool file="filters/axt_to_lav.xml" />
+    <tool file="filters/bed2gff.xml" />
+    <tool file="fasta_tools/fasta_to_tabular.xml" />
+    <tool file="filters/gff2bed.xml" />
+    <tool file="filters/lav_to_bed.xml" />
+    <tool file="maf/maf_to_bed.xml" />
+    <tool file="maf/maf_to_interval.xml" />
+    <tool file="maf/maf_to_fasta.xml" />
+    <tool file="fasta_tools/tabular_to_fasta.xml" />
+    <tool file="fastq/fastq_to_fasta.xml" />
+    <tool file="filters/wiggle_to_simple.xml" />
+    <tool file="filters/sff_extractor.xml" />
+    <tool file="filters/gtf2bedgraph.xml" />
+    <tool file="filters/wig_to_bigwig.xml" />
+    <tool file="filters/bed_to_bigbed.xml" />
+  </section>
+
+  
+   <section name="NGS: Quality control" id="quality control">
+    
+    <label text="FastQC: fastq/sam/bam" id="fastqcsambam" />
+    <tool file="rgenetics/rgFastQC.xml" />
+    
+    <label text="Illumina fastq" id="illumina" />
+    <tool file="fastq/fastq_groomer.xml" />
+    <tool file="fastq/fastq_paired_end_splitter.xml" />
+    <tool file="fastq/fastq_paired_end_joiner.xml" />
+    <tool file="fastq/fastq_stats.xml" />
+   
+    
+    <label text="AB-SOLiD data" id="solid" />
+    <tool file="next_gen_conversion/solid2fastq.xml" />
+    <tool file="solid_tools/solid_qual_stats.xml" />
+    <tool file="solid_tools/solid_qual_boxplot.xml" />
+    
+    <label text="Generic FASTQ manipulation" id="generic_fastq" />
+    <tool file="fastq/fastq_filter.xml" />
+    <tool file="fastq/fastq_trimmer.xml" />
+    <tool file="fastq/fastq_trimmer_by_quality.xml" />
+    <tool file="fastq/fastq_masker_by_quality.xml" />
+    <tool file="fastq/fastq_paired_end_interlacer.xml" />
+    <tool file="fastq/fastq_paired_end_deinterlacer.xml" />
+    <tool file="fastq/fastq_manipulation.xml" />
+    <tool file="fastq/fastq_to_fasta.xml" />
+    <tool file="fastq/fastq_to_tabular.xml" />
+    <tool file="fastq/tabular_to_fastq.xml" />
+    
+    <label text="FASTX-Toolkit for FASTQ data" id="fastx_toolkit" />
+    <tool file="fastx_toolkit/fastq_quality_converter.xml" />
+    <tool file="fastx_toolkit/fastx_quality_statistics.xml" />
+    <tool file="fastx_toolkit/fastq_quality_boxplot.xml" />
+    <tool file="fastx_toolkit/fastx_nucleotides_distribution.xml" />
+    <tool file="fastx_toolkit/fastq_to_fasta.xml" />
+    <tool file="fastx_toolkit/fastq_quality_filter.xml" />
+    <tool file="fastx_toolkit/fastq_to_fasta.xml" />
+    <tool file="fastx_toolkit/fastx_artifacts_filter.xml" />
+    <tool file="fastx_toolkit/fastx_barcode_splitter.xml" />
+    <tool file="fastx_toolkit/fastx_clipper.xml" />
+    <tool file="fastx_toolkit/fastx_collapser.xml" />
+    <tool file="fastx_toolkit/fastx_renamer.xml" />
+    <tool file="fastx_toolkit/fastx_reverse_complement.xml" />
+    <tool file="fastx_toolkit/fastx_trimmer.xml" />
+  </section>
+  
+  
+  <section name="NGS:Genome Assembly (Illumina)" id="genome assembly illumina">
+  </section>
+  
+  
+  
+  
+  
+  <section name="NGS:Genome Assembly (Roche-454)" id="genome assembly roche-454">
+   
+        <tool file="roche454_toolsuite/runAssembly.xml" />
+        <tool file="roche454_toolsuite/runAssembly_cDNA.xml" />
+        <tool file="roche454_toolsuite/runMapping.xml" />
+        <tool file="roche454_toolsuite/runMapping_cDNA.xml" />
+        <!--tool file="roche454_toolsuite/sff_to_fastq.xml" /-->
+        <tool file="roche454_toolsuite/sfffile.xml" />
+  </section>
+  
+  
+  	
+  <section name="NGS: RNA-Seq Assembly" id="rna-seq assembly">
+  </section>
+  
+  
+  <section name="NGS: RNA Analysis" id="rna analysis">  <label text="Mapping" id="mapping" />
+    <tool file="sr_mapping/bowtie2_wrapper.xml" />
+    <tool file="sr_mapping/bfast_wrapper.xml" />
+    <tool file="metag_tools/megablast_wrapper.xml" />
+    <tool file="metag_tools/megablast_xml_parser.xml" />
+    <tool file="sr_mapping/PerM.xml" />
+    <tool file="sr_mapping/srma_wrapper.xml" />
+    <tool file="sr_mapping/mosaik.xml"/>
+  <label text="RNA-seq" id="rna-seq" />
+    <tool file="ngs_rna/tophat_wrapper.xml" />
+    <tool file="ngs_rna/tophat2_wrapper.xml" />
+    <tool file="ngs_rna/tophat_color_wrapper.xml" />
+    <tool file="ngs_rna/cufflinks_wrapper.xml" />
+    <tool file="ngs_rna/cuffcompare_wrapper.xml" />
+    <tool file="ngs_rna/cuffmerge_wrapper.xml" />
+    <tool file="ngs_rna/cuffdiff_wrapper.xml" />
+    <tool file="ngs_rna/express_wrapper.xml" /> 
+  <label text="Filtering" id="filtering" />
+    <tool file="ngs_rna/filter_transcripts_via_tracking.xml" />
+  </section>
+  
+  <section name="NGS: Quantify" id="quantify">
+  </section>
+  
+  <section name="NGS: Differential Expression" id="differential expression">
+  </section>
+  
+  
+  
+  <section name="NGS: Indel Analysis" id="indel_analysis">
+    <tool file="indels/sam_indel_filter.xml" />
+    <tool file="indels/indel_sam2interval.xml" />
+    <tool file="indels/indel_table.xml" />
+    <tool file="indels/indel_analysis.xml" />
+  </section>
+  
+  
+  
+  <section name="NGS: SAM Tools" id="samtools">
+    <tool file="samtools/sam_bitwise_flag_filter.xml" />
+    <tool file="samtools/sam2interval.xml" />
+    <tool file="samtools/sam_to_bam.xml" />
+    <tool file="samtools/bam_to_sam.xml" />
+    <tool file="samtools/sam_merge.xml" />
+    <tool file="samtools/samtools_mpileup.xml" />
+    <tool file="samtools/sam_pileup.xml" />
+    <tool file="samtools/pileup_parser.xml" />
+    <tool file="samtools/pileup_interval.xml" />
+    <tool file="samtools/samtools_flagstat.xml" />
+    <tool file="samtools/samtools_rmdup.xml" />
+    <tool file="samtools/samtools_slice_bam.xml" />
+  </section>
+  
+  
+  
+  
+  <section name="NGS: GATK Tools" id="gatk">
+    <label text="Alignment Utilities" id="gatk_bam_utilities"/>
+    <tool file="gatk/depth_of_coverage.xml" />
+    <tool file="gatk/print_reads.xml" />
+    
+    <label text="Realignment" id="gatk_realignment" />
+    <tool file="gatk/realigner_target_creator.xml" />
+    <tool file="gatk/indel_realigner.xml" />
+    
+    <label text="Base Recalibration" id="gatk_recalibration" />
+    <tool file="gatk/count_covariates.xml" />
+    <tool file="gatk/table_recalibration.xml" />
+    <tool file="gatk/analyze_covariates.xml" />
+    
+    <label text="Genotyping" id="gatk_genotyping" />
+    <tool file="gatk/unified_genotyper.xml" />
+    
+    <label text="Annotation" id="gatk_annotation" />
+    <tool file="gatk/variant_annotator.xml" />
+    
+    <label text="Filtration" id="gatk_filtration" />
+    <tool file="gatk/variant_filtration.xml" />
+    <tool file="gatk/variant_select.xml" />
+    
+    <label text="Variant Quality Score Recalibration" id="gatk_variant_quality_score_recalibration" />
+    <tool file="gatk/variant_recalibrator.xml" />
+    <tool file="gatk/variant_apply_recalibration.xml" />
+    
+    <label text="Variant Utilities" id="gatk_variant_utilities"/>
+    <tool file="gatk/variants_validate.xml" />
+    <tool file="gatk/variant_eval.xml" />
+    <tool file="gatk/variant_combine.xml" />
+  </section>
+  
+  <section name="NGS: Peak Calling" id="peak_calling">
+    <tool file="peak_calling/macs_wrapper.xml" />
+    <tool file="peak_calling/sicer_wrapper.xml" />
+    <tool file="peak_calling/ccat_wrapper.xml" />
+    <tool file="genetrack/genetrack_indexer.xml" />
+    <tool file="genetrack/genetrack_peak_prediction.xml" />
+  </section>
+  
+  <section name="NGS:VCF Tools" id="vcf_tools">
+    <tool file="vcf_tools/intersect.xml" />
+    <tool file="vcf_tools/annotate.xml" />
+    <tool file="vcf_tools/filter.xml" />
+    <tool file="vcf_tools/extract.xml" />
+  </section>
+
+
+ <section name="BMI.IME" id="BMI.IME">
+     <tool file="BMI.IME/toolExample.xml" />
+     <tool file="BMI.IME/extend_end.xml" />
+     <tool file="BMI.IME/bwa_0_7_5.xml" />
+	 <tool file="BMI.IME/blast2tab+e.xml" />
+	 <tool file="BMI.IME/Extract_feature_gb.xml" />
+	 <tool file="BMI.IME/Extract_inform_gb.xml" />
+	 <tool file="BMI.IME/fastq_reverse.xml" />
+	 <tool file="BMI.IME/fq_all2std.xml" />
+	 <tool file="BMI.IME/ionMP_split.xml" />
+	 <tool file="BMI.IME/rev_com_rev.xml" />
+	 <tool file="BMI.IME/reverse_complement.xml" />
+	 <tool file="BMI.IME/shuffleSequences_fasta.xml" />
+	 <tool file="BMI.IME/shuffleSequences_fastq.xml" />
+	 <tool file="BMI.IME/SNP_replace.xml" />
+	 <tool file="BMI.IME/fastx_barcode_splitter.xml" />
+	 <tool file="BMI.IME/GapCloser.xml" />
+	 <tool file="BMI.IME/SOAPdenovo-127mer.xml" />
+	 <tool file="BMI.IME/sff_extract_0_3_0.xml" />
+	 <tool file="BMI.IME/bwa_index.xml" />
+	 <tool file="BMI.IME/bwa_aln.xml" />
+	 <tool file="BMI.IME/bwa_samse.xml" />
+	 
+      </section>
+</toolbox>

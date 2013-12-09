@@ -1,0 +1,16 @@
+﻿<tool id="Extract_inform_gb" name="Extract_inform_gb">
+	<description></description>
+	  <command interpreter="perl">Extract_inform_gb.pl $input $output</command>
+	    <inputs>
+			<param format="gb" name="input" type="data" label="input file" />
+                        <param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="txt" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**Extract_inform_gb Overview**
+
+从genbank文件中提取出序列的通用信息。
+      </help>
+</tool>

@@ -1,0 +1,16 @@
+﻿<tool id="rev_com_rev" name="Rev_com_rev">
+	<description></description>
+	  <command interpreter="perl">rev_com_rev.pl $input $output</command>
+	    <inputs>
+			<param format="fasta" name="input" type="data" label="input file" />
+			<param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="fasta" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**Rev_com_rev Overview**
+
+将多条序列的fa文件每条进行反向互补。同时输出的时候颠倒所有序列的顺序。
+      </help>
+</tool>

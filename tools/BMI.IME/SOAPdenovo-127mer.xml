@@ -1,0 +1,23 @@
+<tool id="SOAPdenovo-127mer" name="SOAPdenovo-127mer">
+	<description></description>
+	  <command interpreter="eval">
+	  ./SOAPdenovo-127mer $select -s $input -o $output -K $x1 -p $x2</command>
+	    <inputs>
+		<param name="select" type="select" label="select subtool">
+				<option value="all">all</option>
+				<option value="contig">contig</option>
+				<option value="pregraph">pregraph</option>
+		</param>
+			<param format="txt" name="input" type="data" label="configFile" />
+			<param name="x1" type="integer" value="23" min="13" max="127" label="kmer size" help="min 13, max 127" />
+			<param name="x2" type="integer" value="8"  label="number of cpu for use" />
+			<param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="txt" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**SOAPdenovo-127mer Overview**
+
+      </help>
+</tool>

@@ -1,0 +1,17 @@
+<tool id="bwa_samse" name="bwa_samse">
+	<description></description>
+	  <command interpreter="eval">./bwa samse $input1 $input2 $input3 -f $output  </command>
+	    <inputs>
+			<param format="fasta" name="input1" type="data" label="input file1" />
+			<param format="txt" name="input2" type="data" label="input file2" />    
+            <param format="fastq" name="input3" type="data" label="input file3" /> 			
+            <param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+				<outputs>
+           <data format="sam" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**bwa_samse Overview**
+
+      </help>
+</tool>

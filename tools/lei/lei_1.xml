@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<tool id="lei" name="lei" >
+  <description>lei</description>
+  <inputs>
+    <conditional name="params">
+      <param name="source_select" type="select" label="fasta/q" help="test">
+        <option value="fasta">fasta</option>
+        <option value="fastq">fastq</option>
+      </param>
+      <when value="fastq"/>
+        <data format="fastq" name="input" metadata_source="reference" />
+      </when>
+      <when value="fasta">
+        <data format="fasta" name="input" metadata_source="reference" />
+      </when>
+    </conditional>
+  </inputs>
+  <outputs>
+    <data format="txt" name="output" metadata_source="reference" />
+  </outputs>
+  <help>
+This tool uses Freebayes to call SNPS given a reference sequence and a BAM alignment file.
+  </help>
+</tool>

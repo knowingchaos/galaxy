@@ -1,0 +1,17 @@
+﻿<tool id="SNP_replace" name="SNP_replace">
+	<description></description>
+	  <command interpreter="perl">SNP_replace.pl $input1 $input2 $output</command>
+	    <inputs>
+			<param format="fasta" name="input1" type="data" label="序列 file" />
+			<param format="txt" name="input2" type="data" label="snp_table file" />
+                        <param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="fasta" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**SNP_replace Overview**
+
+按照指定的snp_table_file将序列中的SNP替换过来。
+      </help>
+</tool>

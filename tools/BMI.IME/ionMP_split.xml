@@ -1,0 +1,16 @@
+﻿<tool id="ionMP_split" name="IonMP_split">
+	<description></description>
+	  <command interpreter="python">ionMP_split.py $input $output</command>
+	    <inputs>
+			<param format="sff" name="input" type="data" label="input file" />
+ 			<param  name="outputfilename" type="text" label="output file name" />
+        </inputs>
+		<outputs>
+           <data format="fastq" name="output" label="${outputfilename}"/>
+        </outputs>
+	  <help>
+**IonMP_split Overview**
+
+将sff_extract产生的mate-pair文件分割成outname/1、outname/2以及outname_se文件，其中/1文件已经反向，才可能被clc及newbler识别为paired-end reads.
+      </help>
+</tool>
